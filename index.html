@@ -21,14 +21,14 @@
   .nav-cta { font-size: 13px; color: var(--text-muted); text-decoration: none; border: 1px solid var(--border); padding: 8px 20px; border-radius: 4px; transition: all 0.2s; letter-spacing: 0.02em; }
   .nav-cta:hover { border-color: var(--border-hover); color: var(--text); }
 
-  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 48px 80px; position: relative; overflow: hidden; }
+  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: flex-start; padding: 120px 48px 80px; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(240,84,122,0.06) 0%, transparent 70%); pointer-events: none; }
   .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(240,120,84,0.04) 0%, transparent 70%); pointer-events: none; }
-  .hero-inner { max-width: 760px; width: 100%; }
+  .hero-inner { max-width: 900px; width: 100%; }
   .hero-label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 28px; }
   .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(42px, 7vw, 72px); line-height: 1.08; margin-bottom: 32px; font-weight: 400; }
   .hero-title .grad { background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-coral) 50%, var(--accent-orange) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .hero-sub { font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 560px; margin-bottom: 48px; font-weight: 300; }
+  .hero-sub { font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 680px; margin-bottom: 48px; font-weight: 300; }
   .hero-sub strong { color: var(--text); font-weight: 400; }
   .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 64px; }
   .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral)); color: white; padding: 14px 32px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.01em; transition: opacity 0.2s; }
@@ -215,7 +215,7 @@
 </section>
 
 <!-- PROBLEM -->
-<section style="background: var(--bg);">
+<section style="background: var(--bg2);">
   <div class="section-label">Суть проблемы</div>
   <h2 class="section-title">Проблема почти никогда не в шаблоне</h2>
   <p class="section-sub">Рекрутер открывает файл и видит не того человека которым вы являетесь на самом деле.</p>
