@@ -19,11 +19,13 @@
   .nav-name { font-family: 'DM Serif Display', serif; font-size: 18px; background: linear-gradient(90deg, var(--accent-pink), var(--accent-coral)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .nav-cta { font-size: 13px; color: var(--text-muted); text-decoration: none; border: 1px solid var(--border); padding: 8px 20px; border-radius: 4px; transition: all 0.2s; letter-spacing: 0.02em; }
   .nav-cta:hover { border-color: var(--border-hover); color: var(--text); }
+
+  /* HERO */
   .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; padding: 120px 48px 80px; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(240,84,122,0.06) 0%, transparent 70%); pointer-events: none; }
   .hero-inner { max-width: 560px; }
   .hero-image { display: flex; align-items: center; justify-content: center; }
-  .hero-image img { width: 100%; max-width: 480px; border-radius: 16px; opacity: 0.92; display: block; }
+  .hero-image img { width: 100%; max-width: 500px; border-radius: 16px; opacity: 0.92; display: block; }
   .hero-label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 28px; }
   .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(38px, 5vw, 64px); line-height: 1.08; margin-bottom: 32px; font-weight: 400; }
   .hero-title .grad { background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-coral) 50%, var(--accent-orange) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -37,17 +39,23 @@
   .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; padding-top: 40px; border-top: 1px solid var(--border); }
   .stat-num { font-family: 'DM Serif Display', serif; font-size: 28px; background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; line-height: 1; margin-bottom: 4px; }
   .stat-label { font-size: 12px; color: var(--text-dim); }
+
   section { padding: 96px 48px; }
   .section-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; }
   .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 400; line-height: 1.15; margin-bottom: 20px; max-width: 600px; }
   .section-sub { font-size: 16px; color: var(--text-muted); max-width: 520px; line-height: 1.7; font-weight: 300; margin-bottom: 0; }
+
+  /* FOR WHOM — two column with illustration */
   .for-whom { background: var(--bg2); }
-  .for-whom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 56px; }
+  .for-whom-inner { display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: start; margin-top: 48px; }
+  .for-whom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
   .for-card { background: var(--bg2); padding: 32px 28px; transition: background 0.2s; }
   .for-card:hover { background: var(--bg3); }
   .for-icon { font-size: 20px; margin-bottom: 16px; display: block; }
   .for-title { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
   .for-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
+  .for-whom-illustration img { width: 100%; border-radius: 16px; opacity: 0.9; }
+
   .problem-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 40px; }
   .prob-side { padding: 40px 36px; }
   .prob-side.bad { background: var(--bg2); }
@@ -57,19 +65,20 @@
   .prob-tag.green { color: #50c878; background: rgba(80,200,120,0.1); }
   .prob-text { font-size: 15px; line-height: 1.8; color: var(--text-muted); font-weight: 300; }
   .prob-text .highlight { color: var(--text); font-weight: 400; }
-  .value-banner { background: var(--bg3); border: 1px solid rgba(240,84,122,0.15); border-radius: 12px; padding: 36px 40px; margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-  .value-item { display: flex; gap: 16px; align-items: flex-start; }
-  .value-icon { font-family: 'DM Serif Display', serif; font-size: 28px; background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0; line-height: 1; margin-top: 2px; }
-  .value-text { font-size: 14px; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
-  .value-text strong { color: var(--text); font-weight: 500; }
+
+  /* INSIDE */
   .inside { background: var(--bg); }
-  .inside-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 40px; }
+  .inside-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 40px; }
   .inside-card { background: var(--bg); padding: 36px 32px; transition: background 0.2s; }
   .inside-card:hover { background: var(--bg2); }
+  .inside-card.bonus { background: var(--bg2); border-left: 2px solid rgba(240,84,122,0.3); }
+  .inside-card.bonus:hover { background: var(--bg3); }
   .inside-num { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--text-dim); margin-bottom: 16px; display: block; }
   .inside-title { font-size: 16px; font-weight: 500; margin-bottom: 10px; }
   .inside-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; font-weight: 300; }
   .inside-tag { display: inline-block; margin-top: 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-coral); opacity: 0.7; }
+
+  /* AUTHOR */
   .author { background: var(--bg2); }
   .author-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; max-width: 860px; }
   .author-photo-wrap { aspect-ratio: 3/4; background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
@@ -83,10 +92,15 @@
   .author-fact::before { content: '→'; color: var(--accent-coral); flex-shrink: 0; margin-top: 1px; }
   .author-fact a { color: var(--accent-coral); text-decoration: none; }
   .author-fact a:hover { text-decoration: underline; }
+
+  /* PRICING */
   .pricing { background: var(--bg); }
-  .pricing-inner { display: grid; grid-template-columns: 1fr 380px; gap: 64px; align-items: start; }
-  .pricing-illustration img { width: 100%; border-radius: 16px; opacity: 0.9; }
-  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  .value-quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; margin-bottom: 48px; }
+  .value-quote { background: var(--bg3); border: 1px solid rgba(240,84,122,0.12); border-radius: 12px; padding: 32px 36px; }
+  .value-quote-icon { font-family: 'DM Serif Display', serif; font-size: 48px; background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 16px; display: block; }
+  .value-quote-text { font-size: 18px; line-height: 1.6; color: var(--text-muted); font-weight: 300; }
+  .value-quote-text strong { color: var(--text); font-weight: 500; font-size: 20px; }
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 800px; }
   .price-card { border: 1px solid var(--border); border-radius: 8px; padding: 40px 36px; background: var(--bg2); transition: border-color 0.2s; position: relative; }
   .price-card:hover { border-color: var(--border-hover); }
   .price-card.featured { border-color: rgba(240,84,122,0.3); background: var(--bg3); }
@@ -107,11 +121,13 @@
   .price-cta.filled { background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral)); color: white; }
   .price-cta.filled:hover { opacity: 0.88; }
   .price-saving { text-align: center; font-size: 13px; color: var(--accent-coral); margin-top: 12px; opacity: 0.8; }
+
   .faq { background: var(--bg2); }
   .faq-list { margin-top: 48px; max-width: 640px; }
   .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
   .faq-q { font-size: 15px; font-weight: 500; margin-bottom: 10px; }
   .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+
   footer { padding: 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
   .footer-name { font-family: 'DM Serif Display', serif; font-size: 16px; background: linear-gradient(90deg, var(--accent-pink), var(--accent-coral)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .footer-links { display: flex; gap: 24px; }
@@ -119,6 +135,7 @@
   .footer-links a:hover { color: var(--text-muted); }
   a.channel-link { color: var(--accent-coral); text-decoration: none; }
   a.channel-link:hover { text-decoration: underline; }
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   .hero-inner > * { animation: fadeUp 0.7s ease both; }
   .hero-label { animation-delay: 0.1s; }
@@ -127,18 +144,20 @@
   .hero-actions { animation-delay: 0.4s; }
   .hero-stats { animation-delay: 0.5s; }
   .hero-image { animation: fadeUp 0.9s ease 0.3s both; }
+
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     section { padding: 72px 24px; }
     .hero { grid-template-columns: 1fr; padding: 100px 24px 72px; gap: 32px; }
     .hero-image { order: -1; }
     .hero-image img { max-width: 300px; margin: 0 auto; }
+    .for-whom-inner { grid-template-columns: 1fr; }
+    .for-whom-illustration { display: none; }
+    .for-whom-grid { grid-template-columns: 1fr; }
     .problem-row { grid-template-columns: 1fr; }
-    .value-banner { grid-template-columns: 1fr; padding: 28px 24px; }
     .author-inner { grid-template-columns: 1fr; gap: 32px; }
     .author-photo-wrap { aspect-ratio: 1/1; max-height: 280px; }
-    .pricing-inner { grid-template-columns: 1fr; }
-    .pricing-illustration { display: none; }
+    .value-quotes { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
     footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
   }
@@ -176,8 +195,8 @@
         <span class="stat-label">блоков контента</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">3</span>
-        <span class="stat-label">промта для ИИ</span>
+        <span class="stat-num">шаблон CV</span>
+        <span class="stat-label">с комментариями</span>
       </div>
       <div class="stat-item">
         <span class="stat-num">20+</span>
@@ -194,26 +213,31 @@
 <section class="for-whom">
   <div class="section-label">Для кого</div>
   <h2 class="section-title">Это для вас, если вы узнаёте себя</h2>
-  <div class="for-whom-grid">
-    <div class="for-card">
-      <span class="for-icon">→</span>
-      <div class="for-title">Откликаетесь, но нет ответов</div>
-      <div class="for-desc">Резюме есть, опыт есть, а приглашений на интервью нет или почти нет.</div>
+  <div class="for-whom-inner">
+    <div class="for-whom-grid">
+      <div class="for-card">
+        <span class="for-icon">→</span>
+        <div class="for-title">Откликаетесь, но нет ответов</div>
+        <div class="for-desc">Резюме есть, опыт есть, а приглашений на интервью нет или почти нет.</div>
+      </div>
+      <div class="for-card">
+        <span class="for-icon">→</span>
+        <div class="for-title">Переехали в Европу</div>
+        <div class="for-desc">Ваш опыт из другой страны — рекрутер не знает ваши компании и не понимает масштаб.</div>
+      </div>
+      <div class="for-card">
+        <span class="for-icon">→</span>
+        <div class="for-title">Непонятно что менять</div>
+        <div class="for-desc">Уже переделывали резюме, может даже после консультантов — но ситуация не меняется.</div>
+      </div>
+      <div class="for-card">
+        <span class="for-icon">→</span>
+        <div class="for-title">Хотите понять рынок ЕС</div>
+        <div class="for-desc">Другие правила, другой формат, другие ожидания — и непонятно как под них подстроиться.</div>
+      </div>
     </div>
-    <div class="for-card">
-      <span class="for-icon">→</span>
-      <div class="for-title">Переехали в Европу</div>
-      <div class="for-desc">Ваш опыт из другой страны — рекрутер не знает ваши компании и не понимает масштаб.</div>
-    </div>
-    <div class="for-card">
-      <span class="for-icon">→</span>
-      <div class="for-title">Непонятно что менять</div>
-      <div class="for-desc">Уже переделывали резюме, может даже после консультантов — но ситуация не меняется.</div>
-    </div>
-    <div class="for-card">
-      <span class="for-icon">→</span>
-      <div class="for-title">Хотите понять рынок ЕС</div>
-      <div class="for-desc">Другие правила, другой формат, другие ожидания — и непонятно как под них подстроиться.</div>
+    <div class="for-whom-illustration">
+      <img src="cover 2.png" alt="Поиск работы в Европе">
     </div>
   </div>
 </section>
@@ -254,7 +278,7 @@
     <div class="inside-card">
       <span class="inside-num">03</span>
       <div class="inside-title">Структура сильного CV</div>
-      <div class="inside-desc">Шесть блоков, что писать в каждом. Почему не нужны фото, дата рождения и домашний адрес — и что писать вместо этого.</div>
+      <div class="inside-desc">Шесть блоков, что писать в каждом. Почему не нужны фото, дата рождения и домашний адрес — и что вместо них.</div>
     </div>
     <div class="inside-card">
       <span class="inside-num">04</span>
@@ -282,10 +306,16 @@
       <div class="inside-title">Финальный чек-лист</div>
       <div class="inside-desc">18 пунктов перед тем как нажать "Отправить". Формат, структура, контент, адаптация — всё в одном месте.</div>
     </div>
-    <div class="inside-card">
+    <div class="inside-card bonus">
       <span class="inside-num">+</span>
-      <div class="inside-title">3 промта для ИИ + шаблон CV</div>
-      <div class="inside-desc">Найти достижения, переписать опыт, написать summary. Плюс шаблон CV с моими комментариями — тот самый который я использую в работе с клиентами.</div>
+      <div class="inside-title">Шаблон CV с комментариями</div>
+      <div class="inside-desc">Тот самый шаблон который я использую в работе с клиентами. Каждый блок с подробными комментариями — что писать, как формулировать, чего избегать. Просто скопируй и заполняй.</div>
+      <span class="inside-tag">Бонус</span>
+    </div>
+    <div class="inside-card bonus">
+      <span class="inside-num">+</span>
+      <div class="inside-title">3 промта для ИИ</div>
+      <div class="inside-desc">Найти скрытые достижения. Переписать обязанности в результаты. Написать summary. Готовы к использованию — просто подставьте свои данные в ChatGPT или Claude.</div>
       <span class="inside-tag">Бонус</span>
     </div>
   </div>
@@ -315,59 +345,54 @@
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
-  <div class="pricing-inner">
-    <div>
-      <div class="section-label">Стоимость</div>
-      <h2 class="section-title">Выберите формат</h2>
-      <p class="section-sub">Оба варианта включают полный гайд. Разница — в уровне поддержки.</p>
-      <div class="value-banner">
-        <div class="value-item">
-          <span class="value-icon">€</span>
-          <p class="value-text">80€ — это меньше чем <strong>один месяц подписки на курсы по карьере</strong> которые вы купили и не прошли.</p>
-        </div>
-        <div class="value-item">
-          <span class="value-icon">→</span>
-          <p class="value-text">Средняя разница в зарплате между <strong>"нашёл работу"</strong> и <strong>"ещё ищу"</strong> — тысячи евро в месяц. Гайд стоит 80€.</p>
-        </div>
-      </div>
-      <div class="pricing-grid">
-        <div class="price-card">
-          <div class="price-title">Только гайд</div>
-          <div class="price-desc">Всё что нужно чтобы переписать резюме самостоятельно — структура, формулы, примеры и промты.</div>
-          <div class="price-amount"><span class="currency">€</span>80</div>
-          <div class="price-note">единоразовая оплата · гайд + шаблон CV</div>
-          <div class="price-includes">
-            <div class="price-includes-title">Включено</div>
-            <div class="price-item">Полный гайд (8 блоков)</div>
-            <div class="price-item">3 промта для ChatGPT / Claude</div>
-            <div class="price-item">Шаблон CV с моими комментариями</div>
-            <div class="price-item">Рабочий лист для поиска достижений</div>
-            <div class="price-item">Карта требований для адаптации</div>
-            <div class="price-item">Финальный чек-лист из 18 пунктов</div>
-          </div>
-          <a href="https://buy.stripe.com/6oUbJ039w8IF6T61WhgEg00" target="_blank" class="price-cta outline">Купить за 80€ →</a>
-        </div>
-        <div class="price-card featured">
-          <div class="price-badge">Популярный выбор</div>
-          <div class="price-title">Гайд + разбор CV</div>
-          <div class="price-desc">Гайд плюс мой письменный разбор вашего резюме с конкретными правками по каждому блоку.</div>
-          <div class="price-amount"><span class="currency">€</span>130</div>
-          <div class="price-note">вместо 160€ · экономия 30€</div>
-          <div class="price-includes">
-            <div class="price-includes-title">Включено</div>
-            <div class="price-item"><strong>Всё из тарифа "Только гайд"</strong></div>
-            <div class="price-item">Письменный разбор вашего CV</div>
-            <div class="price-item">Правки и комментарии по каждому блоку</div>
-            <div class="price-item">Под вашу роль и европейский рынок</div>
-            <div class="price-item">Ответ в течение 3 рабочих дней</div>
-          </div>
-          <a href="https://buy.stripe.com/9B69AS7pM8IFfpC8kFgEg01" target="_blank" class="price-cta filled">Купить за 130€ →</a>
-          <p class="price-saving">Сэкономите 30€ vs покупки по отдельности</p>
-        </div>
-      </div>
+  <div class="section-label">Стоимость</div>
+  <h2 class="section-title">Выберите формат</h2>
+  <p class="section-sub">Оба варианта включают полный гайд и шаблон CV. Разница — в уровне поддержки.</p>
+
+  <div class="value-quotes">
+    <div class="value-quote">
+      <span class="value-quote-icon">€</span>
+      <p class="value-quote-text">80€ — это меньше чем <strong>один месяц подписки на курсы по карьере</strong> которые вы купили и не прошли.</p>
     </div>
-    <div class="pricing-illustration">
-      <img src="cover 2.png" alt="Карьерный консультант">
+    <div class="value-quote">
+      <span class="value-quote-icon">→</span>
+      <p class="value-quote-text">Средняя разница в зарплате между <strong>"нашёл работу"</strong> и <strong>"ещё ищу"</strong> — тысячи евро в месяц. Гайд стоит 80€.</p>
+    </div>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-title">Только гайд</div>
+      <div class="price-desc">Всё что нужно чтобы переписать резюме самостоятельно — структура, формулы, примеры и промты.</div>
+      <div class="price-amount"><span class="currency">€</span>80</div>
+      <div class="price-note">единоразовая оплата · гайд + шаблон CV</div>
+      <div class="price-includes">
+        <div class="price-includes-title">Включено</div>
+        <div class="price-item">8 блоков контента</div>
+        <div class="price-item">Шаблон CV с комментариями</div>
+        <div class="price-item">3 промта для ChatGPT / Claude</div>
+        <div class="price-item">20+ примеров до/после для 5 ролей</div>
+        <div class="price-item">Карта требований для адаптации</div>
+        <div class="price-item">Финальный чек-лист из 18 пунктов</div>
+      </div>
+      <a href="https://buy.stripe.com/6oUbJ039w8IF6T61WhgEg00" target="_blank" class="price-cta outline">Купить за 80€ →</a>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">Популярный выбор</div>
+      <div class="price-title">Гайд + разбор CV</div>
+      <div class="price-desc">Гайд плюс мой письменный разбор вашего резюме с конкретными правками по каждому блоку.</div>
+      <div class="price-amount"><span class="currency">€</span>130</div>
+      <div class="price-note">вместо 160€ · экономия 30€</div>
+      <div class="price-includes">
+        <div class="price-includes-title">Включено</div>
+        <div class="price-item"><strong>Всё из тарифа "Только гайд"</strong></div>
+        <div class="price-item">Письменный разбор вашего CV</div>
+        <div class="price-item">Правки и комментарии по каждому блоку</div>
+        <div class="price-item">Под вашу роль и европейский рынок</div>
+        <div class="price-item">Ответ в течение 3 рабочих дней</div>
+      </div>
+      <a href="https://buy.stripe.com/9B69AS7pM8IFfpC8kFgEg01" target="_blank" class="price-cta filled">Купить за 130€ →</a>
+      <p class="price-saving">Сэкономите 30€ vs покупки по отдельности</p>
     </div>
   </div>
 </section>
@@ -407,12 +432,8 @@
     Резюме которое работает<br>
     <span style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">начинается здесь</span>
   </h2>
-  <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 40px; font-weight: 300; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-    Рынок не читает между строк. Он читает то что написано. Давайте сделаем так чтобы там было написано правильно.
-  </p>
-  <a href="https://buy.stripe.com/6oUbJ039w8IF6T61WhgEg00" target="_blank" class="btn-primary" style="font-size: 15px; padding: 16px 40px;">
-    Купить гайд за 80€ →
-  </a>
+  <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 40px; font-weight: 300; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7;">Рынок не читает между строк. Он читает то что написано. Давайте сделаем так чтобы там было написано правильно.</p>
+  <a href="https://buy.stripe.com/6oUbJ039w8IF6T61WhgEg00" target="_blank" class="btn-primary" style="font-size: 15px; padding: 16px 40px;">Купить гайд за 80€ →</a>
 </section>
 
 <footer>
