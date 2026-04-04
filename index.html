@@ -21,11 +21,11 @@
   .nav-cta:hover { border-color: var(--border-hover); color: var(--text); }
 
   /* HERO */
-  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; padding: 120px 48px 80px; position: relative; overflow: hidden; }
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; padding: 120px 48px 80px; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(240,84,122,0.06) 0%, transparent 70%); pointer-events: none; }
   .hero-inner { max-width: 560px; }
   .hero-image { display: flex; align-items: center; justify-content: center; }
-  .hero-image img { width: 100%; max-width: 500px; border-radius: 16px; opacity: 0.92; display: block; }
+  .hero-image img { width: 100%; border-radius: 16px; opacity: 0.92; display: block; }
   .hero-label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 28px; }
   .hero-title { font-family: 'DM Serif Display', serif; font-size: clamp(38px, 5vw, 64px); line-height: 1.08; margin-bottom: 32px; font-weight: 400; }
   .hero-title .grad { background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-coral) 50%, var(--accent-orange) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -47,14 +47,15 @@
 
   /* FOR WHOM — two column with illustration */
   .for-whom { background: var(--bg2); }
-  .for-whom-inner { display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: start; margin-top: 48px; }
+  .for-whom-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 48px; }
   .for-whom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  .for-card { background: var(--bg2); padding: 32px 28px; transition: background 0.2s; }
+  .for-card { background: var(--bg2); padding: 24px 24px; transition: background 0.2s; aspect-ratio: 1/1; display: flex; flex-direction: column; justify-content: flex-start; }
   .for-card:hover { background: var(--bg3); }
-  .for-icon { font-size: 20px; margin-bottom: 16px; display: block; }
-  .for-title { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
-  .for-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; font-weight: 300; }
-  .for-whom-illustration img { width: 100%; border-radius: 16px; opacity: 0.9; }
+  .for-icon { font-size: 18px; margin-bottom: 12px; display: block; }
+  .for-title { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+  .for-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; font-weight: 300; }
+  .for-whom-illustration { display: flex; align-items: center; }
+  .for-whom-illustration img { width: 100%; border-radius: 16px; opacity: 0.9; display: block; }
 
   .problem-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 40px; }
   .prob-side { padding: 40px 36px; }
@@ -100,7 +101,7 @@
   .value-quote-icon { font-family: 'DM Serif Display', serif; font-size: 48px; background: linear-gradient(135deg, var(--accent-pink), var(--accent-coral)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 16px; display: block; }
   .value-quote-text { font-size: 18px; line-height: 1.6; color: var(--text-muted); font-weight: 300; }
   .value-quote-text strong { color: var(--text); font-weight: 500; font-size: 20px; }
-  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 800px; }
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 800px; margin-left: auto; margin-right: auto; }
   .price-card { border: 1px solid var(--border); border-radius: 8px; padding: 40px 36px; background: var(--bg2); transition: border-color 0.2s; position: relative; }
   .price-card:hover { border-color: var(--border-hover); }
   .price-card.featured { border-color: rgba(240,84,122,0.3); background: var(--bg3); }
@@ -345,9 +346,11 @@
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
-  <div class="section-label">Стоимость</div>
-  <h2 class="section-title">Выберите формат</h2>
-  <p class="section-sub">Оба варианта включают полный гайд и шаблон CV. Разница — в уровне поддержки.</p>
+  <div style="text-align: center; margin-bottom: 8px;">
+    <div class="section-label" style="display: inline-block;">Стоимость</div>
+  </div>
+  <h2 class="section-title" style="text-align: center; margin-left: auto; margin-right: auto;">Выберите формат</h2>
+  <p class="section-sub" style="text-align: center; margin-left: auto; margin-right: auto;">Оба варианта включают полный гайд и шаблон CV. Разница — в уровне поддержки.</p>
 
   <div class="value-quotes">
     <div class="value-quote">
